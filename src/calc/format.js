@@ -39,6 +39,13 @@ export function formatPercent(val, decimals = 2) {
   return `${(val * 100).toFixed(decimals)}%`;
 }
 
+export function formatPercentLatex(val, decimals = 2) {
+  if (val === null || val === undefined || isNaN(val) || !isFinite(val)) {
+    return '—';
+  }
+  return `${(val * 100).toFixed(decimals)}\\%`;
+}
+
 export function round(val, decimals = 4) {
   if (val === null || val === undefined || isNaN(val) || !isFinite(val)) {
     return 0;
